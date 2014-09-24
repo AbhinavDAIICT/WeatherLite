@@ -27,6 +27,11 @@ namespace WeatherLite
             NavigationService.Navigate(new Uri("/AddNew.xaml", UriKind.Relative));
         }
 
+        private void More_Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/More.xaml", UriKind.Relative));
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{

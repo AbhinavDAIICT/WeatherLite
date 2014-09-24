@@ -62,6 +62,7 @@
                 <TextBlock x:Name="humidity_Copy" HorizontalAlignment="Left" Margin="10,205,0,0" TextWrapping="Wrap" Text="Humidity" VerticalAlignment="Top" Width="176" Height="45"/>
                 <TextBlock x:Name="precipitation_Copy" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Precipitation" VerticalAlignment="Top" Width="176" Height="45"/>
             </Grid>
+            <Button x:Name="More_Button" Content="More" HorizontalAlignment="Left" Margin="91,417,0,0" VerticalAlignment="Top" Width="272" Click="More_Button_Click"/>
 
         </Grid>
 

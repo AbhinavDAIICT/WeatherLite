@@ -1,6 +1,6 @@
-﻿<xapCache source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\WeatherLite_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/24/2014 10:35:21 PM">
-  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="9/24/2014 10:35:20 PM" />
-  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\WeatherLite.dll" archivePath="WeatherLite.dll" lastWriteTime="9/24/2014 10:35:19 PM" />
+﻿<xapCache source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\WeatherLite_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="9/24/2014 11:15:36 PM">
+  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="9/24/2014 11:15:33 PM" />
+  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\WeatherLite.dll" archivePath="WeatherLite.dll" lastWriteTime="9/24/2014 11:15:31 PM" />
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="9/24/2014 10:04:29 PM" />
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="9/24/2014 10:04:29 PM" />
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="9/24/2014 10:04:29 PM" />
@@ -17,6 +17,6 @@
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="9/24/2014 10:04:29 PM" />
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="9/24/2014 10:04:29 PM" />
   <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="9/24/2014 10:04:58 PM" />
-  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="9/24/2014 10:35:21 PM" />
-  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="9/24/2014 10:35:20 PM" />
+  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="9/24/2014 11:15:36 PM" />
+  <file source="c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="9/24/2014 11:15:34 PM" />
 </xapCache>
