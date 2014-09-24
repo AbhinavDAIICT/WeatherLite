@@ -33,3 +33,4 @@ c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\o
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\ProjectArchitectures.txt
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\MDILProjectFiles.xml
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\XapCacheFile.xml
+c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\AddNew.g.cs

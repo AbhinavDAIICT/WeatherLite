@@ -41,12 +41,27 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Weather Lite" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock x:Name="placeHead" Text="Your Place" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid HorizontalAlignment="Left" Height="327" Margin="10,10,0,0" VerticalAlignment="Top" Width="436">
+                <TextBlock HorizontalAlignment="Left" Margin="250,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176"/>
+                <TextBlock x:Name="country" HorizontalAlignment="Left" Margin="250,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="temp" HorizontalAlignment="Left" Margin="250,60,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="maxTemp" HorizontalAlignment="Left" Margin="250,105,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="minTemp" HorizontalAlignment="Left" Margin="250,155,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="humidity" HorizontalAlignment="Left" Margin="250,205,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="precipitation" HorizontalAlignment="Left" Margin="250,255,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="country_Copy" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="temp_Copy" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="maxTemp_Copy" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" Text="Max temperature" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="minTemp_Copy" HorizontalAlignment="Left" Margin="10,155,0,0" TextWrapping="Wrap" Text="Min temperature" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="humidity_Copy" HorizontalAlignment="Left" Margin="10,205,0,0" TextWrapping="Wrap" Text="Humidity" VerticalAlignment="Top" Width="176" Height="45"/>
+                <TextBlock x:Name="precipitation_Copy" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Precipitation" VerticalAlignment="Top" Width="176" Height="45"/>
+            </Grid>
 
         </Grid>
 
@@ -58,5 +73,9 @@
             Before shipping remove this XAML and the image itself.-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="addnew" IconUri="/Images/appbar_button1.png" Text="New place" Click="addnew_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>
