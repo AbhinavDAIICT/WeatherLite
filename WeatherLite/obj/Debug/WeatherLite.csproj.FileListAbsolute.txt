@@ -35,3 +35,6 @@ c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\o
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\XapCacheFile.xml
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\AddNew.g.cs
 c:\users\abhinav\documents\visual studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\More.g.cs
+C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\obj\Debug\WeatherLite.csprojResolveAssemblyReference.cache

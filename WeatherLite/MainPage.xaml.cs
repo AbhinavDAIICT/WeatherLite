@@ -10,6 +10,9 @@ using Microsoft.Phone.Shell;
 using WeatherLite.Resources;
 using Windows.Devices.Geolocation;
 using Newtonsoft.Json;
+using System.Runtime.Serialization.Json;
+using System.IO;
+using System.Text;
 
 namespace WeatherLite
 {
@@ -17,15 +20,20 @@ namespace WeatherLite
     {
         string lati;
         string longi;
+        string res;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+            this.Loaded += MainPage_Loaded;
         }
-
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            getLoc();
+           // getWeather();
+        }
         private void addnew_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AddNew.xaml", UriKind.Relative));
@@ -62,40 +70,77 @@ namespace WeatherLite
                     // something else happened acquring the location
                 }
             }
+            while (lati == null)
+            {
+                dbg.Text = "Still Retrieving Location";
+            }
+            getWeather();
         }
 
         // getWeather method gets the weather information 
         public void getWeather()
         {
-            var address = "http://api.openweathermap.org/data/2.5/weather?lat=" + lati + "&lon=" + longi; // address from where data will be fetched
+            // var address = "http://api.openweathermap.org/data/2.5/weather?lat="+lati+"&lon="+longi; // address from where data will be fetched
+            var address = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139";
             WebClient client = new WebClient(); //Web Client is required to fetch data from a web service
             Uri uri = new Uri(address); // Constructing a uri from the address as URI is required by DownloadAsync method of WebClient Object
 
             // Specify that the DownloadStringCallback2 method gets called 
             // when the download completes.
-            client.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadStringCallback); // it is called when download from remote source is complete
+
+            client.DownloadStringCompleted += client_DownloadStringCompleted;
+            //client.DownloadStringCompleted += new DownloadStringCompletedEventHandler(DownloadStringCallback2); // it is called when download from remote source is complete
             client.DownloadStringAsync(uri);
+            dbg.Text = res;
+           
         }
-
-        private void DownloadStringCallback(object sender, DownloadStringCompletedEventArgs e)
+        private void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            try
-            {
-                var rootObject = JsonConvert.DeserializeObject<RootObject>(e.Result);
-                foreach (var name in rootObject.weather)
-                {
+            // Create the Json serializer and parse the response
+            var obj = JsonConvert.DeserializeObject<Weath>(e.Result);
+            this.DataContext = obj;
+            // Populate the TextBoxes with the result fetched from JSON
+            temp.Text = obj.main.temp.ToString();
+            country.Text = obj.sys.country;
+            minTemp.Text = obj.main.temp_min.ToString();
+            maxTemp.Text = obj.main.temp_max.ToString();
+            humidity.Text = obj.main.humidity.ToString();
+            precipitation.Text = obj.rain.__invalid_name__1h.ToString();
 
-                    //TextBlock b1 = new TextBlock();
-                    dbg.Text = name.id.ToString();
-                }
-            }
-            catch
-            {
-                dbg.Text = e.ToString();
-            }
-
-
+           
         }
+        //void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        //{
+
+        //    var obj = JsonConvert.DeserializeObject<Weath>(e.Result);
+
+        //    dbg.Text = "Temperature: " + Convert.ToString(obj.main.temp - 272.15) + " ` Celsius";
+        //}
+
+        //private void DownloadStringCallback2(object sender, DownloadStringCompletedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        var rootObject = JsonConvert.DeserializeObject<RootObject>(e.Result);
+        //        foreach (var name in rootObject.weather)
+        //        {
+
+        //            //TextBlock b1 = new TextBlock();
+        //            dbg.Text = name.description;
+        //        } 
+        //    }
+        //    catch
+        //    {
+        //        dbg.Text = e.ToString();
+        //    }
+
+
+        //}
+
+      
+        // JSON classes end here
+
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
