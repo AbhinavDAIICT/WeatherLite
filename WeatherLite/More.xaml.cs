@@ -40,7 +40,7 @@ namespace WeatherLite
             fvmintemp.Text = fobj.main.temp_min.ToString();
             fvmaxtemp.Text = fobj.main.temp_max.ToString();
             fvtemp.Text = fobj.main.temp.ToString();
-            fvwind.Text = fobj.wind.ToString();
+            fvwind.Text = fobj.wind.speed.ToString();
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -63,6 +63,23 @@ namespace WeatherLite
                 addr = "http://api.openweathermap.org/data/2.5/weather?q=" + temp[0] + "," + temp[1];
                 fvcity.Text = temp[0];
                 fvcountry.Text = temp[1];               
+            }
+        }
+
+        private void GestureListener_Flick(object sender, FlickGestureEventArgs e)
+        {
+            if (e.Direction.ToString().Equals("Horizontal"))
+            {
+
+                if (e.HorizontalVelocity > 0)// Go right
+                {
+                    NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                }
+                else //Left
+                {
+                    NavigationService.Navigate(new Uri("/AddNew.xaml", UriKind.Relative));
+                }
+
             }
         }
 

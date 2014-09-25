@@ -1,6 +1,7 @@
 ﻿<phone:PhoneApplicationPage
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -29,6 +30,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:GestureService.GestureListener>
+                <toolkit:GestureListener Flick="GestureListener_Flick" />
+            </toolkit:GestureService.GestureListener>
             <Grid HorizontalAlignment="Left" Height="287" Margin="10,10,0,0" VerticalAlignment="Top" Width="436">
                 <TextBlock x:Name="fcity" HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="159" Height="40"/>
                 <TextBlock x:Name="fcountry" HorizontalAlignment="Left" Margin="10,54,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="159" Height="40"/>

@@ -33,7 +33,7 @@ namespace WeatherLite
         }
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            getLoc();
+          //  getLoc();
            // getWeather();
         }
         private void addnew_Click(object sender, EventArgs e)
@@ -77,9 +77,22 @@ namespace WeatherLite
             }
             getWeather();
         }
-        private void GestureListener_Flick(object sender, GestureEventArgs e)
+        private void GestureListener_Flick(object sender, FlickGestureEventArgs e)
         {
-            this.gBlocks.Background = new SolidColorBrush(Colors.Red); ;
+            if (e.Direction.ToString().Equals("Horizontal"))
+            {
+
+                if (e.HorizontalVelocity > 0)// Go right
+                {
+                    NavigationService.Navigate(new Uri("/More.xaml", UriKind.Relative));
+                }else //Left
+
+                {
+                              
+
+                }
+
+            }   
         }
         // getWeather method gets the weather information 
         public void getWeather()
