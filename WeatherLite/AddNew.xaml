@@ -28,11 +28,12 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,71,0,0" TextWrapping="Wrap" Text="Enter Your City" VerticalAlignment="Top" Width="272"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,204,0,0" TextWrapping="Wrap" Text="Enter Your Country" VerticalAlignment="Top" Width="272"/>
+            <TextBox x:Name="ncity" HorizontalAlignment="Left" Height="72" Margin="0,71,0,0" TextWrapping="Wrap" Text="Enter Your City" VerticalAlignment="Top" Width="272"/>
+            <TextBox x:Name="ncountry" HorizontalAlignment="Left" Height="72" Margin="0,204,0,0" TextWrapping="Wrap" Text="Enter Your Country" VerticalAlignment="Top" Width="272"/>
             <TextBlock HorizontalAlignment="Left" Margin="11,35,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="262" Height="36"/>
             <TextBlock HorizontalAlignment="Left" Margin="11,176,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top"/>
-            <Button Content="Add" HorizontalAlignment="Left" Margin="178,340,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="addNew" Content="Add" HorizontalAlignment="Left" Margin="178,340,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+            <TextBlock x:Name="ndbg" HorizontalAlignment="Left" Margin="11,456,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="435" Height="93"/>
 
         </Grid>
     </Grid>
