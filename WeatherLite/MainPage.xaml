@@ -1,6 +1,7 @@
 ﻿<phone:PhoneApplicationPage
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -60,11 +61,13 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Grid HorizontalAlignment="Left" Height="327" Margin="10,10,0,0" VerticalAlignment="Top" Width="436">
-                <TextBlock HorizontalAlignment="Left" Margin="250,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176"/>
-                <TextBlock x:Name="country" HorizontalAlignment="Left" Margin="250,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="176" Height="45">
+            <Grid x:Name="gBlocks" HorizontalAlignment="Left" Height="327" Margin="10,10,0,0" VerticalAlignment="Top" Width="436" Background="Chocolate">
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener Flick="GestureListener_Flick" />
+                </toolkit:GestureService.GestureListener>
+                <TextBlock x:Name="country" HorizontalAlignment="Left" Margin="250,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="45" Text="{Binding country}">
                     <TextBlock.DataContext>
-                        <local:Sys country=""/>
+                        <local:Sys/>
                     </TextBlock.DataContext>
                 </TextBlock>
                 <TextBlock x:Name="temp" HorizontalAlignment="Left" Margin="250,60,0,0" TextWrapping="Wrap" Text="{Binding id}" VerticalAlignment="Top" Width="176" Height="45">
