@@ -17,7 +17,7 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton x:Name="addnew" IconUri="/Images/appbar_button1.png" Text="New place" Click="addnew_Click"/>
+            <shell:ApplicationBarIconButton x:Name="addnew" IconUri="/Assets/AppBar/add.png"  Text="New place" Click="addnew_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -102,12 +102,7 @@
                 <TextBlock x:Name="humidity_Copy" HorizontalAlignment="Left" Margin="10,205,0,0" TextWrapping="Wrap" Text="Humidity" VerticalAlignment="Top" Width="176" Height="45"/>
                 <TextBlock x:Name="precipitation_Copy" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Precipitation" VerticalAlignment="Top" Width="176" Height="45"/>
             </Grid>
-            <Button x:Name="More_Button" Content="More" HorizontalAlignment="Left" Margin="91,417,0,0" VerticalAlignment="Top" Width="272" Click="More_Button_Click"/>
-            <TextBlock x:Name="dbg" HorizontalAlignment="Left" Margin="91,357,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="272">
-                <TextBlock.DataContext>
-                    <local:Main/>
-                </TextBlock.DataContext>
-            </TextBlock>
+            <Button x:Name="More_Button" Content="Refresh" HorizontalAlignment="Left" Margin="91,417,0,0" VerticalAlignment="Top" Width="272" Click="More_Button_Click"/>
 
         </Grid>
 

@@ -14,7 +14,12 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="add_new" IconUri="/Assets/AppBar2/add.png"  Text="New" Click="add_new_Click"/>
+            <shell:ApplicationBarIconButton x:Name="remove" IconUri="/Assets/AppBar1/cancel.png"  Text="Remove" Click="remove_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -33,7 +38,7 @@
             <toolkit:GestureService.GestureListener>
                 <toolkit:GestureListener Flick="GestureListener_Flick" />
             </toolkit:GestureService.GestureListener>
-            <Grid HorizontalAlignment="Left" Height="287" Margin="10,10,0,0" VerticalAlignment="Top" Width="436">
+            <Grid x:Name="fBlocks" HorizontalAlignment="Left" Height="327" Margin="10,10,0,0" VerticalAlignment="Top" Width="436" Background="BlueViolet">
                 <TextBlock x:Name="fcity" HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="159" Height="40"/>
                 <TextBlock x:Name="fcountry" HorizontalAlignment="Left" Margin="10,54,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="159" Height="40"/>
                 <TextBlock x:Name="ftemp" HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Width="159" Height="40"/>
@@ -63,9 +68,10 @@
                     </TextBlock.DataContext>
                 </TextBlock>
             </Grid>
-            <Button Content="Invisible" HorizontalAlignment="Left" Margin="78,491,0,0" VerticalAlignment="Top" Width="295" Click="Button_Click"/>
+            <Button Content="Load Favourite" HorizontalAlignment="Left" Margin="91,417,0,0" VerticalAlignment="Top" Width="272" Click="Button_Click"/>
 
         </Grid>
     </Grid>
-
+   
 </phone:PhoneApplicationPage>
+    

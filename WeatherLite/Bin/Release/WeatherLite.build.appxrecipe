@@ -181,6 +181,15 @@
     <AppxPackagedFile Include="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Assets\AppBar1\cancel.png">
+      <PackagePath>Assets\AppBar1\cancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Assets\AppBar2\add.png">
+      <PackagePath>Assets\AppBar2\add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Assets\AppBar\add.png">
+      <PackagePath>Assets\AppBar\add.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\Assets\ApplicationIcon.png">
       <PackagePath>Assets\ApplicationIcon.png</PackagePath>
     </AppxPackagedFile>

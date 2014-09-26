@@ -88,4 +88,3 @@ C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\o
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\obj\Release\ProjectArchitectures.txt
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\obj\Release\MDILProjectFiles.xml
 C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\obj\Release\XapCacheFile.xml
-C:\Users\abhinav\Documents\Visual Studio 2013\Projects\WeatherLite\WeatherLite\obj\Release\WeatherLite.csprojResolveAssemblyReference.cache

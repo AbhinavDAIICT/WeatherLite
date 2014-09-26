@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace WeatherLite
 {
+    //classes generated on converting JSON to .Net using http://json2csharp.com
     public class Weath
     {
         [DataMember]

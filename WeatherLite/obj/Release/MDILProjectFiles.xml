@@ -4,6 +4,9 @@
     <File>resources.pri</File>
     <File>WeatherLite.dll</File>
     <File>Assets\AlignmentGrid.png</File>
+    <File>Assets\AppBar1\cancel.png</File>
+    <File>Assets\AppBar2\add.png</File>
+    <File>Assets\AppBar\add.png</File>
     <File>Assets\BadgeLogo.png</File>
     <File>Assets\Logo.png</File>
     <File>Assets\SplashScreen.png</File>
