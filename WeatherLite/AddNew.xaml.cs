@@ -25,8 +25,8 @@ namespace WeatherLite
         //this method is called when the Add button is pressed
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            rfile();// rfile method reads the state.txt file which stores the favourite place
-            if (counter >= 1)//counter value is 1 when a favourite is already present
+            if(rfile()== true)// rfile method checks whether state.txt is present
+           // if (counter >= 1)//counter value is 1 when a favourite is already present
             {
                 MessageBox.Show("You can add only one favourite");
             }
@@ -112,31 +112,32 @@ namespace WeatherLite
         }
 
         //Method to find whether a favourite is already present
-        private void rfile()
+        private bool rfile()
         {
 
             IsolatedStorageFile file = IsolatedStorageFile.GetUserStoreForApplication();
             if (file.FileExists("state.txt"))// check if state.txt exists
             {
-                IsolatedStorageFileStream fs = file.OpenFile("state.txt", FileMode.Open, FileAccess.Read);// open state.txt
+                return true;
+                //IsolatedStorageFileStream fs = file.OpenFile("state.txt", FileMode.Open, FileAccess.Read);// open state.txt
 
-                using (StreamReader sr = new StreamReader(fs))
-                {
+                //using (StreamReader sr = new StreamReader(fs))
+                //{
 
-                    String str = sr.ReadLine();
-                    String[] temp = str.Split(',');
-                   // MessageBox.Show(temp[2]);
-                    counter = Int32.Parse(temp[2]);//fetching counter value.
-                    /* Ideally, just checking for file existence is enough to tell whether a favourite is present or not.
-                     * The notion of counter will help if we go on to allow users to add more than one location
-                     * */
-                    sr.Close(); // Close Stream Reader
-                }
-                fs.Close(); // Close Isolated File Stream
+                //    String str = sr.ReadLine();
+                //    String[] temp = str.Split(',');
+                //   // MessageBox.Show(temp[2]);
+                //    counter = Int32.Parse(temp[2]);//fetching counter value.
+                //    /* Ideally, just checking for file existence is enough to tell whether a favourite is present or not.
+                //     * The notion of counter will help if we go on to allow users to add more than one location
+                //     * */
+                //    sr.Close(); // Close Stream Reader
+                //}
+                //fs.Close(); // Close Isolated File Stream
             }
             else
             {
-                counter = 0;
+                return false;
             }
             file.Dispose();// Release resources
         }
